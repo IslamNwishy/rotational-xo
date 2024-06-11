@@ -127,10 +127,7 @@ export default function Game() {
           <Board
             boardState={board}
             onCellClick={onCellClick}
-            lastMoves={[
-              lastMoves.X.length >= 3 && lastMoves.X?.[0]?.toString(),
-              lastMoves.O.length >= 3 && lastMoves.O?.[0]?.toString(),
-            ]}
+            lastMoves={[lastMoves[currentPlayer]?.length >= 3 && lastMoves[currentPlayer]?.[0]?.toString()]}
             winningCells={winner?.cells.map((cell) => cell.toString())}
           />
         </div>

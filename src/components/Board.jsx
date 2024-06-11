@@ -11,7 +11,7 @@ function Board({ boardState, onCellClick, lastMoves, winningCells }) {
                 <button
                   onClick={() => onCellClick(i, j)}
                   className={`w-20 h-20 m-5 border border-gray-600 rounded-lg enabled:hover:bg-gray-500 transition-all text-3xl font-bold
-                   ${lastMoves.includes([i, j].toString()) && '!border-red-600 !border-4'} disabled:cursor-not-allowed
+                   ${lastMoves == [i, j].toString() && '!border-red-600 !border-4'} disabled:cursor-not-allowed
                     ${winningCells?.includes([i, j].toString()) && 'bg-green-400'}
                   `}
                   disabled={cell !== null || winningCells}
