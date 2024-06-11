@@ -103,19 +103,18 @@ export default function Game() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-3 text-start">
-        Rotational
-        <br />
-        Tic Tac Toe
-      </h1>
-      <div>
-        <div className="text-3xl font-bold mt-10 text-center">Score</div>
-        <div className="flex justify-between">
-          <div className="text-2xl font-bold">
-            Player X: <span className="text-green-600">{scoreTally.X}</span>
+      <div className="flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-start max-w-26">
+          Rotational
+          <br /> Tic Tac Toe
+        </h1>
+
+        <div className="min-w-12">
+          <div className="text-2xl font-bold flex justify-between">
+            X : <span className="text-green-600">{scoreTally.X}</span>
           </div>
-          <div className="text-2xl font-bold">
-            Player O: <span className="text-green-600">{scoreTally.O}</span>
+          <div className="text-2xl font-bold flex justify-between">
+            O : <span className="text-green-600">{scoreTally.O}</span>
           </div>
         </div>
       </div>
