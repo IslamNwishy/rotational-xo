@@ -103,13 +103,13 @@ export default function Game() {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold mb-3">
+      <h1 className="text-2xl font-bold mb-3 text-start">
         Rotational
         <br />
         Tic Tac Toe
       </h1>
       <div>
-        <div className="text-3xl font-bold mt-10">Score</div>
+        <div className="text-3xl font-bold mt-10 text-center">Score</div>
         <div className="flex justify-between">
           <div className="text-2xl font-bold">
             Player X: <span className="text-green-600">{scoreTally.X}</span>
@@ -120,7 +120,7 @@ export default function Game() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center mt-20">
+      <div className="flex justify-center items-center mt-10 text-center">
         <div>
           <p className="text-lg">
             <strong>{currentPlayer}</strong> Turn
@@ -138,10 +138,10 @@ export default function Game() {
       </div>
 
       {winner && (
-        <div>
-          <div className="text-3xl font-bold mt-10 mb-5">{winner.player} wins!</div>
+        <div className="flex justify-between items-center">
+          <div className="text-3xl font-bold mt-5 mb-5">{winner.player} wins!</div>
           <button
-            className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300  shadow-lg shadow-green-500/50  font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2"
+            className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300  shadow-lg shadow-green-500/50  font-medium rounded-lg text-lg px-5 py-2.5 text-center"
             onClick={restart}
           >
             New Game
